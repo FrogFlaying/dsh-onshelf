@@ -1,0 +1,42 @@
+{
+  "name": "dsh-onshelf",
+  "version": "0.6.1",
+  "private": true,
+  "type": "module",
+  "description": "上架台：扫描本地 DSH 插件、按 awesome-dsh-plugin 规则体检、生成投稿 YAML 与截图清单，并在确认后创建 fork、提交分支、开 PR。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./scan": "./lib/scan.js",
+    "./check": "./lib/check.js",
+    "./entry": "./lib/entry.js",
+    "./github": "./lib/github.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "meta": {
+    "title": "上架台",
+    "description": "扫描本地插件、体检收录规则、生成投稿材料，一键开 PR 到 awesome-dsh-plugin。"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "publish",
+    "awesome-dsh-plugin",
+    "market"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrogFlaying/dsh-onshelf.git"
+  }
+}
